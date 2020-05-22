@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'description_place.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,15 +25,13 @@ class MyApp extends StatelessWidget {
         // This makes the visual density adapt to the platform that you run
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        //visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Hola mundo"),
-        ) ,
-        body: Center(
-          child: Text("Hola mundo feliz"),
+          title: Text("Hola mundo Feliz"),
         ),
+        body: new DescriptionPlace(),
       )
       //MyHomePage(title: 'Flutter Demo Home Page'),
     );
