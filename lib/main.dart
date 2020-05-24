@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'description_place.dart';
 import 'review_list.dart';
 import 'gradient_back.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()
               ],
             ),
-            GradientBack()
+            GradientBack("Popular")
           ],
         ),
       )
@@ -82,6 +83,9 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+      statusBarColor: Colors.blue
+    ));
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //

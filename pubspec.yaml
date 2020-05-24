@@ -41,6 +41,11 @@ flutter:
   assets:
     - assets/img/people.jpg
     - assets/img/ann.jpg
+    - assets/img/beach.jpeg
+    - assets/img/mountain_stars.jpeg
+    - assets/img/mountain.jpeg
+    - assets/img/river.jpeg
+    - assets/img/sunset.jpeg
   fonts:
     - family: "Lato"
       fonts:
