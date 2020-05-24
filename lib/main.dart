@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'description_place.dart';
 import 'review_list.dart';
-import 'gradient_back.dart';
+import 'header_appbar.dart';
 void main() {
   runApp(MyApp());
 }
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                 ReviewList()
               ],
             ),
-            GradientBack("Popular")
+            HeaderAppBar()
           ],
         ),
       )
