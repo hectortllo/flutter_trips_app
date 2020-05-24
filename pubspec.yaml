@@ -40,7 +40,7 @@ dev_dependencies:
 flutter:
   assets:
     - assets/img/people.jpg
-    
+    - assets/img/ann.jpg
   fonts:
     - family: "Lato"
       fonts:

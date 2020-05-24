@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Review extends StatelessWidget {
-  String pathImage = "asset/img/people.jpg";
+  String pathImage = "assets/img/people.jpg";
   String name = "Varuna Yasas";
   String details = "1 review 5 photos";
   String comment = "There is an amazing place in Sri Lanka";
@@ -16,7 +16,7 @@ class Review extends StatelessWidget {
         left: 20.0,
       ),
       child: Text(
-        name,
+        comment,
         textAlign: TextAlign.left,
         style: TextStyle(
           fontSize: 13.0,
@@ -83,7 +83,7 @@ class Review extends StatelessWidget {
     return Row(
       children: <Widget>[
         photo,
-        userComment
+        userDetails
       ],
     );
   }
