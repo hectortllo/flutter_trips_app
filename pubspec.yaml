@@ -48,6 +48,9 @@ flutter:
     - assets/img/sunset.jpeg
     - assets/img/beach_palm.jpeg
     - assets/img/profile.jpg
+    - assets/img/rivendel.jpg
+    - assets/img/rohan.jpg
+    - assets/img/comarca.jpg
   fonts:
     - family: "Lato"
       fonts:
