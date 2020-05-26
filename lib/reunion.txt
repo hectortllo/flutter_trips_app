@@ -1,2 +1,0 @@
-* Si tienen varios chips, le mostrará la lista de #'s de teléfonos.
-* Ese número de teléfono viajará a la plataforma, y la plataforma devolverá el token.
