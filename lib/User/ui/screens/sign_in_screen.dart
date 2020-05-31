@@ -24,13 +24,14 @@ class _SignInScreen extends State<SignInScreen> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Text("Welcome \n This is your Travel App",
+              Text("Welcome \nThis is your Travel App",
                 style: TextStyle(
                   fontSize: 37.0,
                   fontFamily: "Lato",
                   color: Colors.white,
                   fontWeight: FontWeight.bold
                 ),
+                textAlign: TextAlign.center,
               ),
               ButtonGreen(text: "LogIn with Gmail", 
                 onPressed: () {
