@@ -11,8 +11,10 @@ class FireBaseAuthAPI {
     GoogleSignInAuthentication gSA = await googleSignInAccount.authentication;
 
     //Autenticación con firebase
-    FirebaseUser user = _auth.signInWithCredential(
-      GoogleAuthProvider.getCredential(idToken: gSA.idToken, accessToken: gSA.accessToken)) as FirebaseUser;
-      return user;
+    FirebaseUser user = (await _auth.signInWithCredential(
+      GoogleAuthProvider.getCredential(idToken: gSA.idToken, accessToken: gSA.accessToken)
+    )).user;
+
+    return user;
   }
 }
