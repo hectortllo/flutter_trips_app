@@ -8,4 +8,6 @@ class AuthRepository {
   //En el Future viene un dato para su uso futuro, y en este caso es el 
   //de FirebaseUser
   Future<FirebaseUser> signInFirebase() => _firebaseAuthAPI.signIn();
+
+  signOut() => _firebaseAuthAPI.signOut();
 }

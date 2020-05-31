@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/platzi_trips.dart';
+import 'package:platzi_trips_app/platzi_trips_cupertino.dart';
 import 'package:platzi_trips_app/widgets/gradient_back.dart';
 import 'package:platzi_trips_app/widgets/button_green.dart';
 import 'package:platzi_trips_app/User/bloc/bloc_user.dart';
@@ -31,7 +32,7 @@ class _SignInScreen extends State<SignInScreen> {
         if(!snapshot.hasData || snapshot.hasError) {
           return signInGoogleUI();
         } else {
-          return PlatziTrips();
+          return PlatziTripsCupertino();
         }
       },
     );
