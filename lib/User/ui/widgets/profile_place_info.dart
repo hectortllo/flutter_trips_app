@@ -4,7 +4,7 @@ import 'package:platzi_trips_app/widgets/floating_action_button_green.dart';
 
 class ProfilePlaceInfo extends StatelessWidget {
 
-  Place place;
+  final Place place;
 
   ProfilePlaceInfo(this.place);
 

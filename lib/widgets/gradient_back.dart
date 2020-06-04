@@ -1,13 +1,27 @@
 import 'package:flutter/material.dart';
 
 class GradientBack extends StatelessWidget {
+  
   double heightGradient;
-  String title = "Popular";
-  GradientBack(this.title, this.heightGradient);
+  String title;
+
+  //if height == null -> height = full screen
+  GradientBack({
+    Key key,
+    this.heightGradient
+  });
   @override
   Widget build(BuildContext context) {
     
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    if(heightGradient == null){
+      heightGradient = screenHeight;
+    }
+
     return Container(
+      width: screenWidth,
       height: heightGradient,
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -21,7 +35,19 @@ class GradientBack extends StatelessWidget {
           tileMode: TileMode.clamp
         )
       ),
-      child: Text(
+      child: FittedBox(
+        fit: BoxFit.none,
+        alignment: Alignment(-1.5, -0.8),
+        child: Container(
+          width: screenHeight,
+          height: screenHeight,
+          decoration: BoxDecoration(
+            color: Color.fromRGBO(0, 0, 0, 0.05),
+            borderRadius: BorderRadius.circular(screenHeight / 2)
+          ),
+        ),
+      )
+      /*Text(
         title,
         style: TextStyle(
           color: Colors.white,
@@ -29,8 +55,8 @@ class GradientBack extends StatelessWidget {
           fontFamily: "Lato",
           fontWeight: FontWeight.bold
         ),
-      ),
-      alignment: Alignment(-0.9, -0.6),
+      ),*/
+//      alignment: Alignment(-0.9, -0.6),
     );
   }
 

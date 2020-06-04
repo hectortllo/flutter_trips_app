@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ButtonPurple extends StatelessWidget {
-  String buttonText = "Navigate";
+  
+  final String buttonText;
   ButtonPurple(this.buttonText);
 
   @override

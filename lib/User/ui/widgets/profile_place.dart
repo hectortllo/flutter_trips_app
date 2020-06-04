@@ -4,7 +4,7 @@ import 'profile_place_info.dart';
 
 class ProfilePlace extends StatelessWidget {
 
-  Place place;
+  final Place place;
 
   ProfilePlace(this.place);
 

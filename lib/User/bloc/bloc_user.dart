@@ -5,7 +5,7 @@ import 'package:platzi_trips_app/User/repository/auth_repository.dart';
 import 'package:platzi_trips_app/User/repository/cloud_firestore_repository.dart';
 
 class UserBloc implements Bloc {
-  final _auth_repository = AuthRepository();
+  final _authRepository = AuthRepository();
 
   //Flujo de datos (Stream) proveniente de Firebase
   //StreamController
@@ -17,12 +17,12 @@ class UserBloc implements Bloc {
   //Casos de uso del user
   //Caso 1: SigIn a la aplicación con Google
   Future<FirebaseUser>  signIn() {
-    return _auth_repository.signInFirebase();
+    return _authRepository.signInFirebase();
   }
 
   //Caso 2: SingOut
   signOut(){
-    _auth_repository.signOut();
+    _authRepository.signOut();
   }
 
   //Caso 3: Registrar usuario en base de datos

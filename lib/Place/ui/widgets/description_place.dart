@@ -11,7 +11,7 @@ class DescriptionPlace extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    final starHalf = Container(
+    /*final starHalf = Container(
       margin: EdgeInsets.only(
         top: 323.0,
         right: 3.0
@@ -20,7 +20,7 @@ class DescriptionPlace extends StatelessWidget{
         Icons.star_half,
         color: Color(0xFFf2C611),
       )
-    );
+    );*/
 
     final starBorder = Container(
       margin: EdgeInsets.only(

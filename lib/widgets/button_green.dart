@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class ButtonGreen extends StatefulWidget {
   final String text;
   final VoidCallback onPressed;
-  double width = 0.0;
-  double height = 0.0;
+  final double width;
+  final double height;
 
   ButtonGreen({Key key, @required this.text, @required this.onPressed, this.height, this.width});
   @override
