@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/Place/ui/widgets/card_image.dart';
 import 'package:platzi_trips_app/Place/ui/widgets/title_input_location.dart';
+import 'package:platzi_trips_app/widgets/button_purple.dart';
 import 'package:platzi_trips_app/widgets/gradient_back.dart';
 import 'package:platzi_trips_app/widgets/text_input.dart';
 import 'package:platzi_trips_app/widgets/title_header.dart';
@@ -107,6 +108,18 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                     hintText: "Add Location", 
                     iconData: Icons.location_on, 
                     controller: null,
+                  ),
+                ),
+                Container(
+                  width: 70.0,
+                  child: ButtonPurple(
+                    buttonText: "Add Place", 
+                    onPressed: () {
+                      //1. Firebase Storage
+                      //Url
+                      //2. Cloud firestore
+                      //Place -> título, descripción, url, userOwner, likes
+                    }
                   ),
                 )
               ],
