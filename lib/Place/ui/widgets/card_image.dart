@@ -1,7 +1,11 @@
+import 'dart:io';
+
 import "package:flutter/material.dart";
 import 'package:platzi_trips_app/widgets/floating_action_button_green.dart';
 
 class CardImageWithFabIcon extends StatelessWidget{
+  final File image;
+  bool camera = false;
   final double height;
   final double width;
   final double left;
@@ -16,7 +20,9 @@ class CardImageWithFabIcon extends StatelessWidget{
     @required this.height,
     @required this.onPressedFabIcon,
     @required this.iconData,
-    this.left
+    @required this.image,
+    this.left,
+    this.camera
   });
 
   @override
@@ -30,7 +36,7 @@ class CardImageWithFabIcon extends StatelessWidget{
       decoration: BoxDecoration(
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: AssetImage(pathImage)
+          image: camera == true ? FileImage(image) : AssetImage(pathImage)
         ),
         borderRadius: BorderRadius.all(Radius.circular(10.0)),
         shape: BoxShape.rectangle,

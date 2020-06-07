@@ -17,6 +17,7 @@ class CardImageList extends StatelessWidget {
             height: 250.0,
             left: 20.0,
             onPressedFabIcon: null,
+            image: null,
           ),
           CardImageWithFabIcon(
             pathImage: "assets/img/beach_palm.jpeg", 
@@ -25,6 +26,7 @@ class CardImageList extends StatelessWidget {
             height: 250.0, 
             left: 20.0,
             onPressedFabIcon: null,
+            image: null,
           ),
           CardImageWithFabIcon(
             pathImage: "assets/img/mountain.jpeg", 
@@ -33,6 +35,7 @@ class CardImageList extends StatelessWidget {
             height: 250.0, 
             left: 20.0,
             onPressedFabIcon: null,
+            image: null,
           ),
           CardImageWithFabIcon(
             pathImage: "assets/img/mountain_stars.jpeg", 
@@ -41,6 +44,7 @@ class CardImageList extends StatelessWidget {
             height: 250.0, 
             left: 20.0,
             onPressedFabIcon: null,
+            image: null,
           ),
           CardImageWithFabIcon(
             pathImage: "assets/img/river.jpeg", 
@@ -49,6 +53,7 @@ class CardImageList extends StatelessWidget {
             height: 250.0, 
             left: 20.0,
             onPressedFabIcon: null,
+            image: null,
           ),
           CardImageWithFabIcon(
             pathImage: "assets/img/sunset.jpeg", 
@@ -57,6 +62,7 @@ class CardImageList extends StatelessWidget {
             height: 250.0, 
             left: 20.0,
             onPressedFabIcon: null,
+            image: null,
           )
         ],
       ),

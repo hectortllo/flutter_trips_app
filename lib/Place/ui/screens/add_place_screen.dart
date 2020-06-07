@@ -13,9 +13,11 @@ import 'package:platzi_trips_app/User/bloc/bloc_user.dart';
 class AddPlaceScreen extends StatefulWidget {
 
   File image;
+  bool camera = false;
   AddPlaceScreen({
     Key key,
-    this.image
+    this.image,
+    this.camera
   });
 
   @override
@@ -79,12 +81,15 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                 Container(
                   alignment: Alignment.center,
                   child: CardImageWithFabIcon(
-                    pathImage: "assets/img/sunset.jpeg",
+                    pathImage: widget.image.path,
+                    iconData: Icons.camera_alt,
                     width: 300.0,
                     height: 250.0, 
+                    image: widget.image,
                     left: 0.0,
                     onPressedFabIcon: null,
-                    iconData: Icons.camera_alt),
+                    camera: widget.camera,
+                    ),
                 ),
                 Container(
                   margin: EdgeInsets.only(
@@ -121,12 +126,15 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                     onPressed: () {
                       //1. Firebase Storage
                       //Url
+
                       //2. Cloud firestore
                       //Place -> título, descripción, url, userOwner, likes
                       userBloc.updatePlaceData(Place(
                         name: _controllerTitlePlace.text,
                         description: _controllerDescriptionPlace.text,
                         likes: 0,
+                        urlImage: null,
+                        userOwner: null,
                       )).whenComplete(() {
                         print("Terminó");
                         Navigator.pop(context);
