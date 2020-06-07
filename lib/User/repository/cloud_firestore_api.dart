@@ -23,15 +23,15 @@ class CloudFirestoreApi {
     }, merge: true);
   }
 
-  Future<void> updatePlaceDate(Place place) async {
+  Future<void> updatePlaceData(Place place) async {
     CollectionReference refPlaces = _db.collection(_places);
-    await _auth.currentUser().then((FirebaseUser user) {
-      refPlaces.add({
-        'name': place.name,
-        'description': place.description,
-        'likes': place.likes,
-        'userOwner': "$_users/$user.id"
-      });
+    FirebaseUser user = await _auth.currentUser();
+    DocumentReference _userRef = _db.collection(_users).document(user.uid);
+    return refPlaces.add({
+      'name': place.name,
+      'description': place.description,
+      'likes': place.likes,
+      'userOwner': _userRef
     });
   }
 }
