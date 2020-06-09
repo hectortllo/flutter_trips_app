@@ -32,6 +32,12 @@ class CloudFirestoreApi {
       'description': place.description,
       'likes': place.likes,
       'userOwner': _userRef
+    }).then((DocumentReference dr) {
+      dr.get().then((DocumentSnapshot snapshot){
+        _userRef.updateData({
+          'myPlaces': FieldValue.arrayUnion([_db.document("$_places/${snapshot.documentID}")])
+        });
+      });
     });
   }
 }

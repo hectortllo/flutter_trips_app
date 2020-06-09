@@ -89,7 +89,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                     height: 250.0, 
                     image: widget.image,
                     left: 0.0,
-                    onPressedFabIcon: null,
+                    onPressedFabIcon: (){},
                     camera: widget.camera,
                     ),
                 ),
@@ -144,8 +144,7 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                                     name: _controllerTitlePlace.text,
                                     description: _controllerDescriptionPlace.text,
                                     likes: 0,
-                                    urlImage: urlImage,
-                                    userOwner: null,
+                                    urlImage: urlImage
                                   )).whenComplete(() {
                                     print("Terminó");
                                     Navigator.pop(context);
